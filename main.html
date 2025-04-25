@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+                <button class="close-sidebar-btn" id="close-sidebar-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search chat history..." id="search-chat">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="chat-history" id="chat-history">
+                <!-- Chat history items will be added here -->
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="rajeev.jpg" alt="User" class="profile-pic">
+                    <span><i class="fas fa-user"></i> My Account</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <header class="chat-header">
+                <button class="menu-btn" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>MyAI Chatbot</h1>
+                <div class="header-actions">
+                    <button class="action-btn" id="archive-btn" title="Archive">
+                        <i class="fas fa-archive"></i>
+                    </button>
+                    <button class="action-btn" id="delete-btn" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="action-btn share-btn" id="share-btn" title="Share">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                    <div class="user-dropdown">
+                        <img src="rajeev.jpg" alt="User" class="profile-pic">
+                        <div class="dropdown-content">
+                            <a href="#" id="my-account"><i class="fas fa-user"></i> My Account</a>
+                            <a href="#" id="settings"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be added here -->
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea id="user-input" placeholder="Type your message..." autocomplete="off"></textarea>
+                        <button id="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="disclaimer">
+                         Ai ChatBot may display inaccurate info, including about people, so double-check its responses.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast">Link copied to clipboard!</div>
+    <script src="script.js"></script>
+</body>
+</html>
